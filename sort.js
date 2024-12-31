@@ -13,3 +13,10 @@ console.log("somme : " + res.somme);
 console.log("produit : " + res.prod);
 console.log("difference : " + res.diff);
 console.log("quotient : " + res.quot);
+
+
+if (age >= 18) {
+    console.log("majeur");
+} else {
+    console.log("mineur");
+}
