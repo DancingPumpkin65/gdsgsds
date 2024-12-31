@@ -86,3 +86,9 @@ const tab2 = [10, 2, 3, 4, 5];
 function fusionerTableaux(t1, t2) {
     return t1.join(t2);
 }
+
+let tableau = [1, 2, 3, 4, 5];
+
+console.log("dritte Zahl : " + tableau[2]); 
+tableau.push(6);
+console.log("alle Elemente der Tabelle : " + tableau);
