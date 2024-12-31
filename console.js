@@ -38,3 +38,51 @@ console.log( max1);
 function estPair(nombre) {
     (nombre % 2 === 0) ? 'pair' : 'impair';
 }
+
+console.log(estPair(4));
+console.log(estPair(7));
+
+// exo 15
+function compteVoyelles(chaine) {
+    const correspondances = chaine.match(/[aeiouyAEIOUY]/g);
+    return correspondances ? correspondances.length : 0;
+}
+
+// exo 16
+function trierTableau(tableau) {
+    return tableau.sort((a, b) => a - b); 
+}
+
+// exo 17
+function factorielle(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * factorielle(n - 1);
+}
+
+// exo 18 
+function estPremier(n) {
+    if (n <= 1) return false;
+    if (n === 2) return true;
+
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false;
+    }
+
+    return true;
+}
+
+function trouverNombresPremiers(tableau) {
+    return tableau.filter(estPremier); 
+} 
+
+const nombress = [10, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 17, 19, 20, 23, 25, 29];
+const nombresPremiers = trouverNombresPremiers(nombress);
+console.log(nombresPremiers);
+console.log()
+
+const tab1 = [10, 2, 3, 4, 5];
+const tab2 = [10, 2, 3, 4, 5];
+
+function fusionerTableaux(t1, t2) {
+    return t1.join(t2);
+}
